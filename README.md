@@ -22,6 +22,18 @@ Gradle
 ```
 gradle bootRun
 ```
+
+## Containerize
+to build the image
+~~~
+docker build - t rewardcentral .
+~~~
+
+To run the app : 
+~~~
+docker run -d -p 8081:8281 -- name rewardcentral rewardcentral
+~~~
+
  ## Documentation
  DoDocumentation Postman [here](https://documenter.getpostman.com/view/10925968/TVYDdedS)
    

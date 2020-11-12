@@ -21,7 +21,7 @@ public class RewardCentralControler {
 
     /**
      * give attraction reward points
-     * @param attractionId atraction id in UUID format
+     * @param attractionId attraction id in UUID format
      * @param userId user id in UUID format
      * @return reward point for the attraction
      * @throws UUIDException if id are not UUID
@@ -30,7 +30,7 @@ public class RewardCentralControler {
     @ResponseStatus(HttpStatus.OK)
     public int getAttractionRewardPoints (@RequestParam String attractionId, @RequestParam String userId) throws UUIDException {
         try {
-            //logger.debug("Start AttractionRewardPoints for attractionId : " + attractionId +" et userId : " +userId );
+            logger.debug("Start AttractionRewardPoints for attractionId : " + attractionId +" et userId : " +userId );
             UUID attractionIdUUID = UUID.fromString(attractionId);
             UUID userIdUUID = UUID.fromString(userId);
             return rewardCentralService.getAttractionRewardPoints(attractionIdUUID,userIdUUID);
